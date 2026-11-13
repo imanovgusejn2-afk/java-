@@ -90,3 +90,4 @@ async function loadTableData() {
 
 // Запускаем загрузку
 loadTableData();
+// Коммит 2
