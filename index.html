@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа №2 и Задание 5 баллов</title>
+</head>
+<body onload="Page_Initialize()">
+
+    <h1 align="center">Практическая работа</h1>
+    <h2 align="center">Сценарии JavaScript и Работа с API</h2>
+    <hr>
+
+    <!-- ЗАДАНИЕ 2: Картинка с обязательным alt -->
+    <h3>Демонстрация картинки</h3>
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Код на экране компьютера" width="300">
+    
+    <!-- ЗАДАНИЕ 2: Кнопка с console.log и изменением текста -->
+    <h3>Кнопка для задания с console.log</h3>
+    <p id="task2-text">Нажми на кнопку ниже.</p>
+    <button id="task2-btn">Нажми меня</button>
+
+    <hr>
+
+    <!-- ПУНКТ 1. Инициализация -->
+    <h3>1. Инициализация текстового поля при загрузке страницы</h3>
+    <form name="form1">
+        <center>
+            <input type="text" name="hitext" size="30">
+        </center>
+    </form>
+    <hr>
+
+    <!-- ПУНКТ 2. Кнопка -->
+    <h3>2. Кнопка «Показать сообщение»</h3>
+    <form name="form2">
+        <input type="text" name="Textbox" size="30">
+        <br><br>
+        <input type="button" value="Показать сообщение" onClick="ShowMessage(this.form)">
+    </form>
+    <hr>
+
+    <!-- ПУНКТ 3. Флажки -->
+    <h3>3. Пять флажков (checkbox)</h3>
+    <table border bgcolor="cyan" width="250" cellpadding="5">
+        <tr><th><input type="checkbox" name="Check1" onClick="Check1Clicked()"> Флажок 1</th></tr>
+        <tr><th><input type="checkbox" name="Check2" onClick="Check2Clicked()"> Флажок 2</th></tr>
+        <tr><th><input type="checkbox" name="Check3" onClick="Check3Clicked()"> Флажок 3</th></tr>
+    </table>
+    <br>
+    <input type="text" id="TextBox" size="30" readonly>
+    <hr>
+
+    <!-- ПУНКТ 4. Радиокнопки -->
+    <h3>4. Три радиопереключателя (radio)</h3>
+    <form name="form3">
+        <input type="radio" name="radio1" value="1" onClick="Radio1Clicked()"> Переключатель 1<br>
+        <input type="radio" name="radio1" value="2" onClick="Radio2Clicked()"> Переключатель 2<br>
+        <input type="radio" name="radio1" value="3" onClick="Radio3Clicked()"> Переключатель 3<br><br>
+        <input type="text" id="RadioBox" size="30" readonly>
+    </form>
+    <hr>
+
+    <!-- ЗАДАНИЕ 3: GOOGLE SHEETS -->
+    <h2>Данные из Google Таблицы (Задание 3)</h2>
+    <div id="loading">Загрузка данных...</div>
+    <div id="error-message" style="color: red; display: none;"></div>
+    <table id="data-table" border="1" style="display: none; border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Автор</th>
+                <th>Год</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <!-- ПОДКЛЮЧЕНИЕ ВНЕШНЕГО JS -->
+    <script src="script.js"></script>
+</body>
+</html>
